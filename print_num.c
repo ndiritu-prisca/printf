@@ -1,4 +1,4 @@
-#include "main.h"
+#include"main.h"
 
 /**
   * _abs - Calculates absolute value of integer
@@ -26,7 +26,7 @@ int count_digit(int i)
 	unsigned int count = 0;
 	unsigned int n2 = i;
 
-	if (i <= 0)
+	if (i == 0)
 		count += 1;
 
 	while (_abs(n2) != 0)
@@ -46,14 +46,17 @@ int integer(int i)
 	unsigned int unint;
 	int count;
 
-	count = count_digit(i);
 	if (i < 0)
 	{
 		_putchar('-');
 		unint = -i;
+		count = 1 + count_digit(i);
 	}
 	else
+	{
 		unint = i;
+		count = count_digit(i);
+	}
 
 	if (unint >= 10)
 		integer(unint / 10);
