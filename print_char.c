@@ -7,13 +7,6 @@
   */
 int print_char(va_list ap)
 {
-	char c;
-
-	c = va_arg(ap, int);
-	while (c != '\0')
-	{
-		_putchar(c);
-		break;
-	}
+	_putchar(va_arg(ap, int));
 	return (1);
 }
