@@ -16,7 +16,7 @@ int _printf(const char *format, ...);
 typedef struct printf_control
 {
 	char *i;
-	void (*f)(va_list);
+	int (*f)(va_list);
 } _printf_t;
 int get_print(const char *format, _printf_t gets[], va_list ap);
 int print_int(va_list ap);
