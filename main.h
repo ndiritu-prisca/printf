@@ -30,6 +30,7 @@ int count_digit(int i);
 int _abs(int i);
 int integer(int i);
 int print_binary(va_list ap);
+int print_unsigned(va_list ap);
 int print_octal(va_list ap);
 int print_hex(va_list ap);
 int print_HEX(va_list ap);
