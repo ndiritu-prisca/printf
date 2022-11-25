@@ -37,7 +37,7 @@ int get_print(const char *format, _printf_t gets[], va_list ap)
 				else
 				{
 					sum_char = 0;
-					return (-2);
+					return (-1);
 				}
 			}
 			x = x + 1;
