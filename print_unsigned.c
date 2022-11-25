@@ -20,7 +20,7 @@ int print_unsigned(va_list ap)
 		_putchar(n / x + '0');
 		count++;
 		n %= x;
-		x %= 10;
+		x /= 10;
 	}
 	return (count);
 }
