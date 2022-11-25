@@ -26,8 +26,6 @@ int get_print(const char *format, _printf_t gets[], va_list ap)
 					break;
 				}
 			}
-			if (format[x] == '\0')
-				break;
 			if (gets[y].i == NULL && (format[x + 1]) != ' ')
 			{
 				if (format[x + 1] != '\0')
@@ -37,7 +35,10 @@ int get_print(const char *format, _printf_t gets[], va_list ap)
 					sum_char += 2;
 				}
 				else
+				{
+					sum_char = 0;
 					return (-2);
+				}
 			}
 			x = x + 1;
 		}
