@@ -32,6 +32,7 @@ int integer(int i);
 int print_binary(va_list ap);
 int print_unsigned(va_list ap);
 int print_octal(va_list ap);
-int print_hex(va_list ap);
+int hex_str(unsigned int n, unsigned int ap, char alpha);
+int print_hexl(va_list ap);
 int print_HEX(va_list ap);
 #endif
