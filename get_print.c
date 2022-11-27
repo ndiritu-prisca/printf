@@ -5,9 +5,10 @@
   * @format: a character string composed of zero or more directives
   * @gets: array of functions
   * @ap: list of arguments passed to the the program
+  * @buf: buffer size
   * Return: number of characters printed.
   */
-int get_print(const char *format, _printf_t gets[], va_list ap)
+int get_print(const char *format, _printf_t gets[], va_list ap, char *buf)
 {
 	int x, y, n, sum_char = 0;
 
@@ -19,7 +20,7 @@ int get_print(const char *format, _printf_t gets[], va_list ap)
 			{
 				if (format[x + 1] == gets[y].i[0])
 				{
-					n = gets[y].f(ap);
+					n = gets[y].f(ap, buf);
 					if (n == -1)
 						return (-1);
 					sum_char += n;
