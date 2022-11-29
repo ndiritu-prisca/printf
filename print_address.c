@@ -22,7 +22,7 @@ int print_address(va_list ap, char *buf)
 	}
 	if (!addr)
 	{
-		buf = "(nil)";
+		buf = "(nil)(nil)";
 		return (write(1, buf, 5));
 	}
 	x = addr;
