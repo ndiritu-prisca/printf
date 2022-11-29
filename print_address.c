@@ -17,8 +17,8 @@ int print_address(va_list ap, char *buf)
 
 	if (!addr)
 	{
-		buf = "(nil)(nil)";
-		return (write(1, buf, 10));
+		buf = "(nil)";
+		return (write(1, buf, 5);
 	}
 	y = addr;
 	buf[n] = '0', n++, buf[n] = 'x', n++;
