@@ -10,7 +10,7 @@
 int print_address(va_list ap, char *buf)
 {
 	unsigned int n = 0;
-	unsigned long int addr, x, y = 1;
+	unsigned long int addr, y, z = 1;
 	char ch;
 
 	addr = va_arg(ap, unsigned long int);
@@ -20,24 +20,24 @@ int print_address(va_list ap, char *buf)
 		buf = "(nil)(nil)";
 		return (write(1, buf, 10));
 	}
-	x = addr;
+	y = addr;
 	buf[n] = '0', n++, buf[n] = 'x', n++;
 
-	while (x > 15)
+	while (y > 15)
 	{
-		y *= 16;
-		x /= 16;
+		z *= 16;
+		y /= 16;
 	}
-	for (; y > 0; y /= 16)
+	for (; z > 0; z /= 16)
 	{
-		x = (addr / y);
-		if (x < 9)
-			ch = x + '0';
+		y = (addr / z);
+		if (y < 9)
+			ch = y + '0';
 		else
-			ch = (x + 39) + '0';
+			ch = (y + 39) + '0';
 		buf[n] = ch;
 		n++;
-		addr %= y;
+		addr %= z;
 	}
 	return (write(1, buf, n));
 }
