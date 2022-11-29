@@ -20,7 +20,7 @@ int print_address(va_list ap, char *buf)
 		buf[n] = '0', n++;
 		return (write(1, buf, n));
 	}
-	if (!addr)
+	if (addr == NULL)
 	{
 		buf = "(nil)(nil)";
 		return (write(1, buf, 5));
