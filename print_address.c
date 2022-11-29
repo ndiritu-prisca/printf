@@ -15,11 +15,6 @@ int print_address(va_list ap, char *buf)
 
 	addr = va_arg(ap, unsigned long int);
 
-	if (addr == 0)
-	{
-		buf[n] = '0', n++;
-		return (write(1, buf, n));
-	}
 	if (!addr)
 	{
 		buf = "(nil)(nil)";
