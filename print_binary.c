@@ -3,14 +3,17 @@
 /**
   * print_binary - a function that converts unsigned int to binary
   * @ap: list of arguments
+  * @buf: buffer size
   * Return: number of characters
   */
-int print_binary(va_list ap)
+int print_binary(va_list ap, char *buf)
 {
 	int numc = 0, x;
 	int *p;
 	unsigned int i = va_arg(ap, unsigned int);
 	unsigned int tmp = i;
+
+	(void)buf;
 
 	while (i / 2 != 0)
 	{

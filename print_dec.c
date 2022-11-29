@@ -3,13 +3,16 @@
 /**
   * print_dec - Returns int to signed decimal
   * @ap: va_list arguments passedd
+  * @buf: buffer size
   * Return: length of integers
   */
 
-int print_dec(va_list ap)
+int print_dec(va_list ap, char *buf)
 {
 	int i, div, len;
 	unsigned int num;
+
+	(void)buf;
 
 	i = va_arg(ap, int);
 	div = 1;

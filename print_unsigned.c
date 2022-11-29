@@ -3,13 +3,16 @@
 /**
   * print_unsigned - a function that prints unsigned int
   * @ap: list of arguments to print from
+  * @buf: buffer size
   * Return: number of characters printed
   */
-int print_unsigned(va_list ap)
+int print_unsigned(va_list ap, char *buf)
 {
 	unsigned int n;
 	int x = 1;
 	int count = 0;
+
+	(void)buf;
 
 	n = va_arg(ap, unsigned int);
 

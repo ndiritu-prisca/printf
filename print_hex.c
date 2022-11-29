@@ -34,21 +34,25 @@ int hex_str(unsigned int n, unsigned int ap, char alpha)
 /**
   * print_hexl - ffuction to print lower case hexadecimal
   * @ap: argument passed
+  * @buf: buffer size
   * Return: Number of characters printed
   */
 
-int print_hexl(va_list ap)
+int print_hexl(va_list ap, char *buf)
 {
+	(void)buf;
 	return (hex_str(va_arg(ap, unsigned int), 16, 'a'));
 }
 
 /**
   * print_HEX - Function to print upper case hexa
   * @ap: Argument passed
+  * @buf: buffer size
   * Return: Number of characters printed
 */
 
-int print_HEX(va_list ap)
+int print_HEX(va_list ap, char *buf)
 {
+	(void)buf;
 	return (hex_str(va_arg(ap, unsigned int), 16, 'A'));
 }
