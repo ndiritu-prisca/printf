@@ -39,4 +39,5 @@ int print_HEX(va_list ap, char *buf);
 int print_S(va_list ap, char *buf);
 char *conversion(unsigned long int n, int base, int y);
 int print_address(va_list ap, char *buf);
+int converter(int asc);
 #endif
