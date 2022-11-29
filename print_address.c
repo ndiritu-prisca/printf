@@ -20,10 +20,10 @@ int print_address(va_list ap, char *buf)
 		buf[n] = '0', n++;
 		return (write(1, buf, n));
 	}
-	if (addr == NULL)
+	if (!addr)
 	{
 		buf = "(nil)(nil)";
-		return (write(1, buf, 5));
+		return (write(1, buf, 10));
 	}
 	x = addr;
 	buf[n] = '0', n++, buf[n] = 'x', n++;
