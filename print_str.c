@@ -12,7 +12,7 @@ int print_str(va_list ap, char *buf)
 	char *str;
 	int count = 0;
 	int i;
-	
+
 	buf = va_arg(ap, char *);
 
 	if (!buf)

@@ -18,7 +18,7 @@ int print_unsigned(va_list ap, char *buf)
 
 	while (n / x > 9)
 		x *= 10;
-	while(x != 0)
+	while (x != 0)
 	{
 		_putchar(n / x + '0');
 		count++;

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * converts to string
+  * conversion - converts to string
   * @n: parameter 1
   * @base: base type
   * @y: flag if needs to be in lowercase

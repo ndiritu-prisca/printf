@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
-  * print_s - Function to print string of non printable characters
+  * print_S - Function to print string of non printable characters
   * @ap: va_list argument to be passed
   * @buf: buffer size
   *Return: number of characters printed

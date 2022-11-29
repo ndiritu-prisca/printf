@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(ap, format);
-	
+
 	buf = malloc(1024 * sizeof(char));
 	if (buf == NULL)
 	{
